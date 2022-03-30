@@ -1,4 +1,4 @@
-(function createRectButton(
+function createRectButton(
   x,
   y,
   width,
@@ -46,4 +46,4 @@
   pop();
   rectMode(CORNER);
   textAlign(LEFT);
-});
+}

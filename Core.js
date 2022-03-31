@@ -48,11 +48,10 @@
   rectMode(CORNER);
   textAlign(LEFT);
 }
-}
 
 
-
-{
+  
+  
 function search(
   numberToSearchFor,
   arrayVariable,
@@ -93,5 +92,3 @@ function search(
   }
 }
 }
-
-

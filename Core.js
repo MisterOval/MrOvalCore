@@ -1,4 +1,5 @@
-{function createRectButton(
+{
+  function createRectButton(
   x,
   y,
   width,
@@ -46,4 +47,51 @@
   pop();
   rectMode(CORNER);
   textAlign(LEFT);
-}}
+}
+}
+
+
+
+{
+function search(
+  numberToSearchFor,
+  arrayVariable,
+  doneVariable//boolean, optional, if array is already in order from
+  //least to greatest set to "true",ex:search(num, arr, true); 
+  //else: do search(num, arr, done);
+  
+  //requires a constant variable named "found" to exist and to be set
+  //to false
+) {
+  aV = arrayVariable;
+  dV = doneVariable;
+  num = numberToSearchFor;
+  aVAF = aV.at(aV.length / 2);
+  aV0 = aV.at(0);
+  if (found == false) {
+    if (dV == true) {
+      if (aVAF != num) {
+        if (aVAF < num) {
+          aV.splice(0, floor(aV.length / 2));
+          console.log("cut");
+        } else {
+          aV.splice(floor(aV.length / 2), floor(aV.length / 2));
+          console.log("cut");
+        }
+      } else {
+        if (aV.length == 2) {
+          aV.splice(0, 1);
+        } else {
+          console.log("found");
+          found = true;
+          
+        }
+      }
+    }
+  } else {
+    return true;
+  }
+}
+}
+
+

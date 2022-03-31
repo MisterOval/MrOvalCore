@@ -1,5 +1,4 @@
-{
-  function createRectButton(
+function createRectButton(
   x,
   y,
   width,
@@ -50,8 +49,8 @@
 }
 
 
-  
-  
+
+
 function search(
   numberToSearchFor,
   arrayVariable,
@@ -90,5 +89,4 @@ function search(
   } else {
     return true;
   }
-}
 }

@@ -83,7 +83,7 @@ function search(
         } else {
           console.log("found");
           found = true;
-          
+          return num;
         }
       }
     }

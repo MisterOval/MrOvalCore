@@ -1,3 +1,7 @@
+function mOCSetup(){
+  found = false;
+}
+
 function createRectButton(
   x,
   y,
@@ -54,12 +58,9 @@ function createRectButton(
 function search(
   numberToSearchFor,
   arrayVariable,
-  doneVariable//boolean, optional, if array is already in order from
+  doneVariable //boolean, optional, if array is already in order from
   //least to greatest set to "true",ex:search(num, arr, true); 
   //else: do search(num, arr, done);
-  
-  //requires a constant variable named "found" to exist and to be set
-  //to false
 ) {
   aV = arrayVariable;
   dV = doneVariable;

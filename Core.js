@@ -71,11 +71,19 @@ function search(
     if (dV == true) {
       if (aVAF != num) {
         if (aVAF < num) {
-          aV.splice(0, floor(aV.length / 2));
-          console.log("cut");
+          if(aV.length == 1){
+            return false;
+          } else {
+            aV.splice(0, floor(aV.length / 2));
+            console.log("cut");
+          }
         } else {
-          aV.splice(floor(aV.length / 2), floor(aV.length / 2));
-          console.log("cut");
+          if(aV.length == 1){
+            return false;
+          } else {
+            aV.splice(floor(aV.length / 2), floor(aV.length / 2));
+            console.log("cut");
+          }
         }
       } else {
         if (aV.length == 2) {
@@ -83,7 +91,6 @@ function search(
         } else {
           console.log("found");
           found = true;
-          return num;
         }
       }
     }

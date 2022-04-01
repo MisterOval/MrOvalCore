@@ -6,7 +6,7 @@ function createRectButton(
   cornerRadius,
   textWritten,
   textSizeV /* optional, 'null' for default */,
-  textColor /* optional, 'null' for default */,
+  textColor /* optional, 'null' for default, for custom color 'color(r, g, b)' */,
   rectColor /* optional, 'null' for default, for custom color 'color(r, g, b)' */
   ) 
 {

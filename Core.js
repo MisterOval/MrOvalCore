@@ -1,5 +1,6 @@
 function mOCSetup(){
   found = false;
+  
 }
 
 function createRectButton(
@@ -91,6 +92,7 @@ function search(
         } else {
           console.log("found");
           found = true;
+          aV = [num];
         }
       }
     }

@@ -92,12 +92,12 @@ function search(
         } else {
           console.log("found");
           found = true;
-          aV = [num];
         }
       }
     }
   } else {
     return true;
+    aV = [num];
   }
 }
 //

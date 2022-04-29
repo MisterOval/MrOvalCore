@@ -1,6 +1,6 @@
-function mOCSetup(){
+function mOCSetup() {
   found = false;
-  
+  fail = false;
 }
 
 function createRectButton(
@@ -13,8 +13,7 @@ function createRectButton(
   textSizeV /* optional, 'null' for default */,
   textColor /* optional, 'null' for default, for custom color 'color(r, g, b)' */,
   rectColor /* optional, 'null' for default, for custom color 'color(r, g, b)' */
-  ) 
-{
+) {
   push();
   rectMode(CENTER);
   textAlign(CENTER);
@@ -26,7 +25,7 @@ function createRectButton(
   ) {
     width += 5;
     height += 5;
-    if (mouseIsPressed){
+    if (mouseIsPressed) {
       if (mouseButton === LEFT) {
         return true;
       }
@@ -53,15 +52,11 @@ function createRectButton(
   textAlign(LEFT);
 }
 
-
-
-
 function search(
   numberToSearchFor,
   arrayVariable,
   doneVariable //boolean, optional, if array is already in order from
-  //least to greatest set to "true",ex:search(num, arr, true); 
-  //else: do search(num, arr, done);
+  //least to greatest, set to "true",ex:search(num, arr, true);
 ) {
   aV = arrayVariable;
   dV = doneVariable;
@@ -69,32 +64,38 @@ function search(
   aVAF = aV.at(aV.length / 2);
   aV0 = aV.at(0);
   if (found == false) {
-    if (dV == true) {
-      if (aVAF != num) {
-        if (aVAF < num) {
-          if(aV.length == 1){
-            console.log("failed");
-            return false;
+    if (fail == false) {
+      if (dV == true) {
+        if (aVAF != num) {
+          if (aVAF < num) {
+            if (aV.length == 1) {
+              console.log("failed");
+              aV.splice(0, aV.length);
+              fail = true;
+              return false;
+            } else {
+              aV.splice(0, floor(aV.length / 2));
+              console.log("cut");
+            }
           } else {
-            aV.splice(0, floor(aV.length / 2));
-            console.log("cut");
+            if (aV.length == 1) {
+              console.log("failed");
+              aV.splice(0, aV.length);
+              failed = true;
+              return false;
+            } else {
+              aV.splice(floor(aV.length / 2), floor(aV.length / 2));
+              console.log("cut");
+            }
           }
         } else {
-          if(aV.length == 1){
-            console.log("failed");
-            return false;
+          if (aV.length == 2) {
+            aV.splice(0, 1);
           } else {
-            aV.splice(floor(aV.length / 2), floor(aV.length / 2));
-            console.log("cut");
+            console.log("found");
+            aV.splice(0, aV.length, num);
+            found = true;
           }
-        }
-      } else {
-        if (aV.length == 2) {
-          aV.splice(0, 1);
-        } else {
-          console.log("found");
-          aV = [num];
-          found = true;
         }
       }
     }

@@ -73,6 +73,7 @@ function search(
       if (aVAF != num) {
         if (aVAF < num) {
           if(aV.length == 1){
+            console.log("failed");
             return false;
           } else {
             aV.splice(0, floor(aV.length / 2));
@@ -97,8 +98,8 @@ function search(
       }
     }
   } else {
-    return true;
     aV = [num];
+    return true;
   }
 }
 //

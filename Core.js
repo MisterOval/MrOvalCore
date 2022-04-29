@@ -80,6 +80,7 @@ function search(
           }
         } else {
           if(aV.length == 1){
+            console.log("failed");
             return false;
           } else {
             aV.splice(floor(aV.length / 2), floor(aV.length / 2));

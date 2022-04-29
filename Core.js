@@ -93,12 +93,12 @@ function search(
           aV.splice(0, 1);
         } else {
           console.log("found");
+          aV = [num];
           found = true;
         }
       }
     }
   } else {
-    aV = [num];
     return true;
   }
 }

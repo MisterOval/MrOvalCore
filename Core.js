@@ -60,7 +60,7 @@ function search(
   doneVariable //boolean, optional, if array is already in order from
   //least to greatest, set to "true",ex:search(num, arr, true);
 ) {
-  aV = arrayVariable;
+  let aV = arrayVariable;
   dV = doneVariable;
   num = numberToSearchFor;
   aVAF = aV.at(aV.length / 2);

@@ -1,6 +1,8 @@
 function mOCSetup() {
   found = false;
   fail = false;
+  ints = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+  rIA = [""];
 }
 
 function createRectButton(
